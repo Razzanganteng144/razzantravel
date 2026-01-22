@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razzan Travel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  width: 360px;
+  padding: 40px 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(18px);
+  color: white;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  animation: cinematicIn 1.2s ease forwards;
+}
+
+/* AVATAR */
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.5);
+  animation: float 4s ease-in-out infinite;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+}
+
+li {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 5px;
+}
+
+/* BUTTON */
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2.5s infinite;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,114,255,0.6);
+}
+
+/* ANIMATIONS */
+@keyframes cinematicIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(0,198,255,0.6); }
+  70% { box-shadow: 0 0 30px rgba(0,198,255,0); }
+  100% { box-shadow: 0 0 0 rgba(0,198,255,0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 420px) {
+  .card {
+    width: 90%;
+    padding: 30px 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <img src="https://i.imgur.com/hNdoH8b.png" class="avatar">
+
+  <h1>RAZZAN TRAVEL</h1>
+  <p>KEMANA PUN KAMI SIAP MELAYANI</p>
+
+  <ul>
+    <li>🚍 Sewa Bus Pariwisata</li>
+    <li>🚐 Travel Antar Kota</li>
+    <li>🌍 Tour & Travel</li>
+    <li>🔥 Open Trip</li>
+  </ul>
+
+  <span class="badge">Fast Response</span>
+  <span class="badge">Trusted Service</span>
+
+  <button onclick="window.open('https://wa.me/6289654855871','_blank')">
+    Konsultasi Gratis
+  </button>
+</div>
+
+</body>
+</html>
